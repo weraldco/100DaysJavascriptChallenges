@@ -1,0 +1,45 @@
+* {
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto',sans-serif;
+    /* background-color: rgb(9, 2, 41); */
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    height: 80vh;
+    text-overflow: none;
+    justify-content: center;
+    align-content: center;
+}
+
+.container button {
+    padding:1em 1.2em;
+    height: 3.3em;
+    font-size:2em;
+    border:none;
+    outline:none;
+    cursor: pointer;
+    border-radius: 2.5em;
+    background-color: rgb(253, 197, 14);
+    transition: background-color 250ms;
+}
+
+button:hover {
+    background-color: rgb(243, 209, 97);
+}
+button:active {
+    background-color: rgb(219, 181, 56);
+}
+
+.container span{
+    padding:.1em .5em;
+    font-size: 5em;
+    width: 2em;
+    text-align: center;
+}
