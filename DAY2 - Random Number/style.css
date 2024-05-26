@@ -1,0 +1,38 @@
+* {
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto',sans-serif;
+    font-size:11px;
+    font-style: italic;
+    /* background-color: rgb(9, 2, 41); */
+}
+
+.container {
+    display: grid;
+    grid-template-columns:auto;
+    height: 80vh;
+    text-overflow: none;
+    justify-content: center;
+    align-content: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+.container span{
+    font-size: 15em;
+    font-weight: bold;
+    text-align: center;
+    font-style: normal;
+    background-color: rgb(224, 181, 37);
+    border-radius: 2em;
+    padding: 0.2em;
+    width: 1.5em;
+    margin-top:0.2em
+
+}
