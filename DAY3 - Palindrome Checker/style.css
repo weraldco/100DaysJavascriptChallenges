@@ -1,0 +1,71 @@
+* {
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto',sans-serif;
+    font-size:11px;
+    font-style: italic;
+    /* background-color: rgb(9, 2, 41); */
+}
+
+.container {
+    display: grid;
+    grid-template-columns:auto;
+    height: 80vh;
+    text-overflow: none;
+    justify-content: center;
+    align-content: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+.container input, .container button {
+    font-size:2em;
+    padding:0.5em;
+    outline: none;
+    border-radius: 1em;
+    margin-top:1.25em
+
+}
+.container input {
+    border:1px solid #333;
+}
+.container span  {
+    font-size: 1.25em;
+    margin-left:1em;
+    margin-top:0.5em;
+    color:rgb(240, 104, 104);
+}
+.container button {
+    border:none;
+    background-color: rgb(46, 110, 230);
+    color:white;
+    cursor: pointer;
+    transition: background-color 250ms;
+}
+
+button:hover {
+    background-color:  rgb(67, 123, 226);
+}
+
+button:active {
+    background-color: rgb(34, 102, 230);
+}
+
+.container div div {
+    margin-top:3em;
+    font-size: 1.5em;
+    text-align: center;
+
+    background-color: rgb(78, 204, 78);
+    padding:.5em;
+
+}
+.container div div.wrong {
+    background-color: rgb(241, 92, 92);
+}
