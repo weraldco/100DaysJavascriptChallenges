@@ -1,0 +1,74 @@
+* {
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto',sans-serif;
+    font-size:11px;
+    font-style: italic;
+    /* background-color: rgb(9, 2, 41); */
+}
+
+.container {
+    display: grid;
+    grid-template-columns:auto;
+    height: 80vh;
+    text-overflow: none;
+    justify-content: center;
+    align-content: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+.container input, .container button {
+    font-size:2em;
+    padding:0.5em;
+    outline: none;
+    border-radius: 1em;
+    margin-top:1.25em
+
+}
+.container input {
+    border:1px solid #333;
+}
+
+.container button {
+    border:none;
+    background-color: rgb(46, 110, 230);
+    color:white;
+    cursor: pointer;
+    transition: transform 0.25s;
+    
+}
+
+button:hover {
+    background-color:  rgb(67, 123, 226);
+    transform: translateY(-0.25rem);
+}
+
+button:active {
+    background-color: rgb(34, 102, 230);
+}
+
+.display-result {
+    margin-top:2em;
+}
+
+.paragraph {
+    font-size: 1.5em;
+    font-style: normal;
+    margin-bottom: .5em;
+}
+
+.vowel-count {
+    font-size:1.25em;
+    color:rgb(45, 173, 45);
+}
+
+.vowel {
+    color:rgb(250, 75, 75);
+}
