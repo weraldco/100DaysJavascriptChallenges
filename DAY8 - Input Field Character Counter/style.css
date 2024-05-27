@@ -1,0 +1,41 @@
+* {
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto',sans-serif;
+    font-size:11px;
+    font-style: italic;
+    /* background-color: rgb(9, 2, 41); */
+}
+
+.container {
+    display: grid;
+    grid-template-columns:auto;
+    height: 80vh;
+    text-overflow: none;
+    justify-content: center;
+    align-content: center;
+}
+
+
+.container input {
+    font-size:2em;
+    padding:0.5em;
+    outline: none;
+    border-radius: 1em;
+    margin-top:1.25em
+
+}
+.container input {
+    border:1px solid #333;
+}
+
+
+.char-count {
+    font-size:1.25em;
+    color:rgb(45, 173, 45);
+    margin-top: 1em;
+}
