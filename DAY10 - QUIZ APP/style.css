@@ -1,0 +1,179 @@
+* {
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto Slab',sans-serif;
+    min-width: 400px;
+    background-color: rgb(102, 71, 141);
+}
+
+.container {
+   
+    display: grid;
+    grid-template-columns:400px;
+
+    height: 80vh;
+    text-overflow: none;
+    justify-content: center;
+    align-content: center;
+}
+
+header {
+    display: grid;
+    grid-template-columns: repeat(2, 200px);
+    text-overflow: none;
+    justify-content: center;
+    align-content: center;
+    margin-bottom: 2em;
+    margin-top:1em;
+    
+}
+
+.title {
+    color:white;
+    font-size: 2em;
+}
+.question-count {
+    color:white;
+    font-size: 1.2em;
+    justify-self:end;
+    align-self: center;
+}
+.question {
+    color:white;
+    background-color: rgb(236, 112, 112);
+    font-size: 2em;
+    text-align: center;
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    
+    padding:0.5em;
+    border-radius: 0.5em;
+}
+
+.options {
+    display: grid;
+    grid-template-columns: repeat(2,190px );
+    justify-content: space-between;
+    align-content: center;
+    gap:1em;
+    margin-top:1em;
+}
+
+.options button[data-option] {
+    color:rgb(87, 87, 87);
+    background-color: rgb(255, 255, 255);
+    border:none;
+    outline:none;
+    font-size:1.5em;
+    font-family: "Freeman", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    padding:0.5em;
+    border-radius: 0.5em;
+    transition: transform 0.25s;
+    cursor: pointer;
+
+}
+
+button[data-option]:hover {
+    transform:translateY(-0.25em);
+}
+button[data-option]:active {
+    transform:translateY(0.25em);
+}
+button[data-option][data-selected] {
+    background-color: rgb(66, 175, 71);
+    color:white;
+}
+
+
+.submit-section {
+    display:grid;
+    grid-template-columns: 100px;
+    justify-content: end;
+    align-self: baseline;
+    margin-top:2em;
+}
+
+.submit-section button {
+    color:white;
+    background-color: rgb(58, 129, 223);
+    border:none;
+    outline: none;
+    cursor: pointer;
+    font-size:1.2em;
+    padding: 0.5em;
+    border-radius: 2em;
+    transition: background-color 0.25s;
+    
+}
+
+.submit-section button:hover {
+    background-color: rgb(77, 140, 223);
+}
+.submit-section button:active {
+    background-color: rgb(43, 107, 190);
+}
+
+.end-message {
+    display:grid;
+    grid-template-columns: auto;
+    color:rgb(200, 238, 245);
+    text-align: center;
+    font-size:1.5em;
+    font-weight:bold;
+}
+
+.end-message h2 {
+    color:rgb(236, 173, 226);
+}
+.view-result {
+    display: grid;
+    font-size:1.5em;
+    width: 200px;
+    justify-self: center;
+    align-self: center;
+    margin-top:1.5em;
+    padding:0.25em;
+    border:none;
+    outline: none;
+    background-color: rgb(241, 222, 110);
+    border-radius: 0.5em;
+    cursor: pointer;
+    transition: transform 0.25s;
+
+}
+
+.view-result:hover{
+    transform: translateY(-0.25em);
+    background-color: rgb(238, 225, 152);
+}
+.view-result:active{
+    transform: translateY(1.25em);
+    background-color: rgb(238, 225, 152);
+}
+
+span.score-label {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin-top:1em;
+    font-size:1.25em;
+    font-style: italic;
+    color:white;
+}
+span.score {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    font-size:5em;
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color:rgb(238, 155, 117);
+}
