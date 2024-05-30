@@ -4,7 +4,7 @@ const optionsSection = document.querySelector('.options')
 const container = document.querySelector('.container')
 const questionNumber = document.querySelector('.question-count')
 const htmlData = ''
-let questionCount = 0
+let questionCount = 1
 
 const sampleQuestion = [
     {
@@ -83,10 +83,14 @@ nextBtn.addEventListener('click',()=>{
     getNewQuestion()
 })
 
-
 function getNewQuestion() {
-    setTimeout(()=>{
-        if(questionCount !== 10) {
+        const counteAnswered = sampleQuestion.filter(question => question.answered !== '')
+    
+        if(counteAnswered.length < 10) {
+            
+            questionNumber.textContent = `Question ${questionCount} of 10`
+            questionCount++
+
             question.innerHTML = ''
             optionsSection.innerHTML = ''
 
@@ -109,35 +113,30 @@ function getNewQuestion() {
                 optionsSection.append(button)
             })
             question.append(questionSpan)
-            
             getOptions(result[i].question)
-            questionCount++
-            questionNumber.textContent = `Question ${questionCount} of 10`
-
 
         } else {
             container.innerHTML = ''
             
             const answered = sampleQuestion.filter(item => {
                 return item.answered === item.answer})
-            
+            console.log(answered.length)
             const html = `<div class="end-message"><h2>THANK YOU!</h2> your quiz is done!</div>
-            <span class='score-label'>Score:</span>  <span class='score'>${answered.length}</span>`
-            // const html = `<div class="end-message"><h2>THANK YOU!</h2> your quiz is done!</div>
-            // <button class='view-result'>View your result</button>`
+            <span class='score-label'>Score:</span>  <span class='score'>${answered.length}</span>
+            <button id='resultView'>View your result</button>`
             
             container.innerHTML = html
+
+            const viewResultBtn = document.getElementById('resultView')
+            viewResultBtn.addEventListener('click',viewResult)
+            
             console.log(sampleQuestion)
             console.log(answered)
         }
-    }, 500)
     
-    
-
 }
 
 function getOptions(question) {
-    
     let lastTile = -1
     const allOptions = document.querySelectorAll('[data-option]')
     allOptions.forEach((option, index) => {
@@ -156,7 +155,39 @@ function getOptions(question) {
             
         })
      })
-     
 }
 
+function viewResult(){
+    container.innerHTML =''
+    const resultSection = document.createElement('div')
+    resultSection.classList.add('result')
+    container.append(resultSection)
+    let html = ''
 
+    const results = sampleQuestion.filter(question=> {
+        return question.answered !== ''
+    })
+
+    results.forEach(question => {
+        if(question.answer == question.answered) {
+            html += `
+            <div class="result-question correct">
+                <i class="fa-regular fa-circle-check"></i>
+                <div>
+                    ${question.question}
+                    <span class="answer">Your answer: ${question.answered}</span>
+                </div>
+            </div>`
+        } else {
+           html += `
+            <div class="result-question wrong">
+            <i class="fa-regular fa-circle-xmark"></i>
+                <div>
+                    ${question.question}
+                    <span class="answer">Your answer: ${question.answered}</span>
+                </div>
+            </div>`
+         }
+         resultSection.innerHTML = html
+    })
+}

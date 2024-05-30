@@ -177,3 +177,43 @@ span.score {
     font-style: normal;
     color:rgb(238, 155, 117);
 }
+
+.result{ 
+    display: grid;
+    grid-template-columns: auto;
+    row-gap: 1em;
+    justify-content: center;
+    align-items: center;
+    margin-top:4em;
+}
+
+.result-question {
+    background-color: rgb(255, 255, 255);
+    padding:0.5em;
+    border-radius: 0.5rem;
+    display: grid;
+    grid-template-columns: 50px 350px;
+}
+
+.result-question.correct i, .result-question.wrong i {
+    font-size: 2em;
+    margin-right: 0.3em;
+
+}
+.result-question.correct i {
+    color:rgb(88, 207, 88);
+}
+
+.result-question.wrong i {
+    color:rgb(221, 87, 87);
+}
+
+.result-question div {
+    font-weight: bold;
+    display: grid;
+    row-gap: 0.25em;
+}
+.answer {
+    font-style: italic;
+    font-weight: normal;
+}
