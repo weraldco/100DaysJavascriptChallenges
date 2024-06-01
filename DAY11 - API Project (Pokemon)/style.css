@@ -30,7 +30,7 @@ header {
     border:none;
 }
 
-.display-pokemon{
+.display-all-pokemon{
     
     display: grid;
     grid-template-columns: repeat(3,auto);
@@ -58,8 +58,41 @@ header {
     background-color: lightblue;
     display: grid;
     grid-template-columns: auto;
+    gap:1em;
+    justify-content: center;
+    align-content: center;
+    padding-bottom: 3em;
+    border-radius: dws;
+    position: relative;
 }
 
 .display-pokemon img {
     height: 8em;
+}
+
+.pokemon-name {
+    font-family: "Poetsen One", sans-serif;
+    font-size:2em;
+    color:rgb(240, 63, 32);
+}
+.abilities{
+    display: grid;
+    grid-template-columns: auto;
+}
+
+
+.next-btn,.prev-btn {
+    position: absolute;
+    cursor: pointer;
+    font-size: 1.5em;
+}
+
+.next-btn {
+    right: 2.5em;
+    top: 2em;
+}
+
+.prev-btn {
+    left:2.5em;
+    top:2em;
 }
