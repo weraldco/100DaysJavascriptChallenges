@@ -1,4 +1,4 @@
-const API_KEY = '837aa0f0761a8644e2a8f53ccd5e2529'
+const API_KEY = ''
 const cityNameTxt = document.getElementById('cityNameTxt')
 const submitBtn = document.getElementById('submitBtn')
 
