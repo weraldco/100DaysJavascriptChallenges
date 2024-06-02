@@ -1,0 +1,171 @@
+* {
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto',sans-serif;
+    font-size:11px;
+    /* font-style: italic; */
+ 
+    background-color: rgb(155, 179, 245);
+    /* background-color: rgb(9, 2, 41); */
+}
+
+.container {
+    display: grid;
+    grid-template-columns:380px;
+    height: 90vh;
+    text-overflow: none;
+    justify-content: center;
+    align-content: center;
+    padding:2em;
+    transition: 0.4s ease;
+}
+
+.input-section {
+    display:grid;
+    grid-template-columns: auto;
+    align-content: center;
+    position: relative;
+    margin-bottom: 2em;
+}
+
+.city-name-txtbox {
+    font-size:1.7em;
+    padding:0.75em;
+    border:none;
+    outline: none;
+    border-radius: 5em;
+}
+
+.city-name-txtbox  {
+    width: 100%;
+}
+
+.submit-btn {
+    background-color: rgb(26, 106, 211);
+    color:white;
+    transition: background-color 0.25s;
+    position: absolute;
+    right: .15em;
+    top:.15em; 
+
+    font-size:1.7em;
+    padding:0.6em .7em;
+    border:none;
+    outline: none;
+    border-radius: 5em;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    /* transform: translateY(-0.2em); */
+    background-color: rgb(46, 120, 218);
+}
+.submit-btn:active {
+    /* transform: translateY(0.2em); */
+    background-color: rgb(46, 120, 218);
+}
+
+
+.display-weather {
+    font-size: 2em;
+    display:grid;
+    grid-template-columns: auto;
+    background-color: rgb(79, 107, 177);
+   
+    padding: .7em ;
+    text-align: center;
+    border-radius: 1.7em;
+    padding-bottom: 1.5em;
+
+}
+.display-weather div.detail {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    font-size: 0.8em;
+    margin-right: .7em;
+}
+
+.display-weather img {
+    margin-top: 1em;
+    height: 10em;
+    align-self: center;
+    justify-self: center;
+}
+
+.city-name {
+    
+    font-family: "Averia Libre", system-ui;
+    font-weight: 700;
+    font-size: 2.5em;
+    color:white;
+    margin-top: 1em;
+}
+
+.temperature {
+    font-family: "Alkatra", system-ui;
+    font-size: 1.1em;
+    color:rgb(243, 164, 118);
+}
+
+.weather-type {
+    font-family: "Alkatra", system-ui;
+    font-size: 1.5em;
+    color:rgb(255, 255, 255);
+    margin-bottom: 1em;
+    text-transform: capitalize;
+}
+
+.wind-speed,
+.humidity,
+.sunrise,
+.sunset {
+    display: grid;
+    position: relative;
+    color:white;
+    margin-left:1em;
+    margin-top: 1em;
+    font-weight: normal;
+    font-size: .9em;
+}
+
+.wind-speed i,
+.humidity i,
+.sunrise i,
+.sunset i {
+    position: absolute;
+    font-size: 1.5em;
+    color:rgb(161, 191, 255);
+    
+}
+
+.humidity, .sunset {
+    /* justify-self:right; */
+    text-align: right;
+}
+.humidity i,.sunset i {
+    left:2em;
+}
+
+.display-weather {
+    scale: 0;
+    opacity: 0;
+}
+
+/* .notfound {
+    opacity: 0;
+    scale: 0;
+    height: 20em;
+    display: grid;
+    justify-self:center;
+    align-self: center;
+}  */
+.show {
+    scale: 1;
+    opacity: 1;
+    
+}
+

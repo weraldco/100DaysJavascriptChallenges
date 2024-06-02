@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alkatra:wght@400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Averia+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="input-section">
+            <input id="cityNameTxt" class="city-name-txtbox"  type="text" placeholder="Enter name of city">
+            <button id="submitBtn" class="submit-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        <!-- <img src="img/404.png" class="notfound"> -->
+        <div class="display-weather" id="displayWeather">
+           
+            <img src="" id ='weatherImg'>
+            <span class="city-name" id="cityName"></span>
+            <span class="temperature" id="temperature"></span>
+            <span class="weather-type" id="weatherType"></span>
+            <div class="detail">
+                <span class="wind-speed">
+                    <i class="fa-solid fa-wind"></i> 
+                    <span>Windspeed</span>
+                    <span id="windspeedValue"></span>
+                </span>
+                <span class="humidity">
+                    <i class="fa-solid fa-water"></i> 
+                    <span>Humidity</span>
+                    <span id="humidityValue"></span>
+                </span>
+            </div>
+            <div class="detail">
+                <span class="sunrise">
+                    <i class="fa-solid fa-sun"></i>
+                    <span>Sunrise</span>
+                    <span id="sunriseTime"></span>
+                </span>
+
+                <span class="sunset">
+                    <i class="fa-regular fa-sun"></i>
+                    <span>Sunset</span>
+                    <span id="sunsetTime"></span>
+                </span>
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>
